@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Our Secret</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- BACKGROUND FLOWERS -->
+
+        <div class="flower flower1">🌸</div>
+        <div class="flower flower2">🌷</div>
+        <div class="flower flower3">🌼</div>
+        <div class="flower flower4">🌸</div>
+
+
+        <!-- LOGIN PAGE -->
+
+        <div
+            class="card"
+            id="loginPage"
+        >
+
+            <!-- PHOTOS -->
+
+            <div class="photos">
+
+  <div class="heart-frame">
+    <img src="photo1.jpg" alt="صورة 1">
+  </div>
+
+  <div class="heart-frame">
+    <img src="photo2.jpg" alt="صورة 2">
+  </div>
+
+</div>
+
+
+            <!-- TITLE -->
+
+            <h1>
+                Enter our secret code
+            </h1>
+
+            <p class="subtitle">
+                Only we know it ♡
+            </p>
+
+
+            <!-- PIN -->
+
+            <div class="pin-container">
+
+                <div
+                    class="pin-box"
+                    id="pin1"
+                ></div>
+
+                <div
+                    class="pin-box"
+                    id="pin2"
+                ></div>
+
+                <div
+                    class="pin-box"
+                    id="pin3"
+                ></div>
+
+                <div
+                    class="pin-box"
+                    id="pin4"
+                ></div>
+
+            </div>
+
+
+            <!-- ERROR -->
+
+            <div id="error"></div>
+
+
+            <!-- KEYPAD -->
+
+            <div class="keypad">
+
+                <button onclick="pressKey('1')">
+                    1
+                </button>
+
+                <button onclick="pressKey('2')">
+                    2
+                </button>
+
+                <button onclick="pressKey('3')">
+                    3
+                </button>
+
+
+                <button onclick="pressKey('4')">
+                    4
+                </button>
+
+                <button onclick="pressKey('5')">
+                    5
+                </button>
+
+                <button onclick="pressKey('6')">
+                    6
+                </button>
+
+
+                <button onclick="pressKey('7')">
+                    7
+                </button>
+
+                <button onclick="pressKey('8')">
+                    8
+                </button>
+
+                <button onclick="pressKey('9')">
+                    9
+                </button>
+
+
+                <button class="empty"></button>
+
+                <button onclick="pressKey('0')">
+                    0
+                </button>
+
+                <button onclick="deleteKey()">
+                    ⌫
+                </button>
+
+            </div>
+
+
+            <!-- CHECK BUTTON -->
+
+            <button
+                class="heart-button"
+                onclick="checkPin()"
+            >
+                ♥
+            </button>
+
+
+            <!-- BUNNY -->
+
+            <div class="bunny">
+                🐰
+            </div>
+
+        </div>
+
+
+        <!-- SUCCESS PAGE -->
+
+        <div
+            class="success-page"
+            id="successPage"
+        >
+
+            <div class="big-heart">
+                ♥
+            </div>
+
+            <h2>
+                Correct!
+            </h2>
+
+            <p>
+                Welcome to our little world ♡
+            </p>
+
+            <div class="success-bunny">
+                🐰
+            </div>
+
+
+            <!-- GIFTS -->
+
+            <div class="gift-container">
+
+                <!-- GIFT 1 -->
+
+                <div
+                    class="gift-box"
+                    onclick="openGift(1)"
+                >
+
+                    <div class="gift-lid"></div>
+
+                    <div class="gift-body"></div>
+
+                    <div class="gift-ribbon-v"></div>
+
+                    <div class="gift-ribbon-h"></div>
+
+                </div>
+
+
+                <!-- GIFT 2 -->
+
+                <div
+                    class="gift-box"
+                    onclick="openGift(2)"
+                >
+
+                    <div class="gift-lid"></div>
+
+                    <div class="gift-body"></div>
+
+                    <div class="gift-ribbon-v"></div>
+
+                    <div class="gift-ribbon-h"></div>
+
+                </div>
+
+
+                <!-- GIFT 3 -->
+
+                <div
+                    class="gift-box"
+                    onclick="openGift(3)"
+                >
+
+                    <div class="gift-lid"></div>
+
+                    <div class="gift-body"></div>
+
+                    <div class="gift-ribbon-v"></div>
+
+                    <div class="gift-ribbon-h"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FLOWER MODAL -->
+
+        <div
+            class="gift-modal"
+            id="flowerModal"
+        >
+
+            <button
+                class="close-modal"
+                onclick="closeGift()"
+            >
+                ×
+            </button>
+
+            <div class="flower-show">
+
+                <div class="floating-flower f1">
+                    🌸
+                </div>
+
+                <div class="floating-flower f2">
+                    🌷
+                </div>
+
+                <div class="floating-flower f3">
+                    🌼
+                </div>
+
+                <div class="floating-flower f4">
+                    🌸
+                </div>
+
+                <div class="big-flower">
+                    🌺
+                </div>
+
+
+                <div class="love-bubble b1">
+                    happy birthday reemoooo ♡
+                </div>
+
+                <div class="love-bubble b2">
+                    
+                    ♡ عيد ميلاد سعيد يا اختنا ريييموووو🥹🌷
+                </div>
+
+                <div class="love-bubble b3">
+                    ♡ عيد ميلاد سعيد يا اختنا ريييموووو🥹🌷 ♡
+                </div>
+
+                <div class="love-bubble b4">
+                    happy birthday reemoooo ♡
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MUSIC MODAL -->
+
+        <div
+            class="gift-modal"
+            id="musicModal"
+        >
+
+            <button
+                class="close-modal"
+                onclick="closeGift()"
+            >
+                ×
+            </button>
+
+            <div class="music-box">
+
+                <div class="music-icon">
+                    🎵
+                </div>
+
+                <h2>
+                    Our Music
+                </h2>
+
+                <p>
+                    هذه أغنيتنا ♡
+                </p>
+
+                <audio
+                    id="giftMusic"
+                    controls
+                    preload="metadata"
+                >
+
+                    <source
+                        src="./music.mp3"
+                        type="audio/mpeg"
+                    >
+
+                    متصفحك لا يدعم تشغيل الصوت.
+
+                </audio>
+
+            </div>
+
+        </div>
+
+
+        <!-- LETTER MODAL -->
+
+        <div
+            class="gift-modal"
+            id="letterModal"
+        >
+
+            <button
+                class="close-modal"
+                onclick="closeGift()"
+            >
+                ×
+            </button>
+
+            <div class="old-paper">
+
+                <h2>
+                    رسالة صغيرة ♡
+                </h2>
+
+                <p>
+                  عيد ميلاد سعيد يا اختنا ريهام نتمنى لك سنة ملئة بسعادة و نجاح و صحجة و نتمنى لك العمر المديييد جدا يا اختنا 
+                </p>
+
+                <p>
+                    شكرًا على كل لحظة جميلة، وعلى كل كلمة لطيفة،
+                    وعلى كل ابتسامة جعلت يومًا عاديًا يبدو أجمل.
+                    ربما لا تكفي الكلمات لوصف قيمة الأشياء الجميلة
+                    التي نتذكرها.
+                </p>
+
+                <p>
+                    أتمنى أن تبقى الأيام القادمة مليئة بالفرح،
+                    والضحكات، واللحظات التي تستحق أن نتذكرها.
+                    وكلما عدت إلى هذه الصفحة، أتمنى أن تجد فيها
+                    شيئًا يجعلك تبتسم.
+                </p>
+
+                <p>
+                    هذه الرسالة مجرد طريقة صغيرة لأقول:
+                    شكرًا على كل شيء جميل ♡
+                </p>
+
+                <div class="letter-sign">
+                    With love sister ♡من صناعة 
+                  خوك مراد و 
+                  اختاك اكرام و حنان 
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
