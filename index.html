@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -40,15 +40,15 @@
 
             <div class="photos">
 
-  <div class="heart-frame">
-    <img src="photo1.jpg" alt="صورة 1">
-  </div>
+                <div class="heart-frame">
+                    <img src="photo1.jpg" alt="صورة 1">
+                </div>
 
-  <div class="heart-frame">
-    <img src="photo2.jpg" alt="صورة 2">
-  </div>
+                <div class="heart-frame">
+                    <img src="photo2.jpg" alt="صورة 2">
+                </div>
 
-</div>
+            </div>
 
 
             <!-- TITLE -->
@@ -250,12 +250,29 @@
 
                 </div>
 
+                <!-- GIFT 4 (الصندوق الرابع للتسجيلات) -->
+
+                <div
+                    class="gift-box"
+                    onclick="openGift(4)"
+                >
+
+                    <div class="gift-lid"></div>
+
+                    <div class="gift-body"></div>
+
+                    <div class="gift-ribbon-v"></div>
+
+                    <div class="gift-ribbon-h"></div>
+
+                </div>
+
             </div>
 
         </div>
 
 
-        <!-- FLOWER MODAL -->
+        <!-- PHOTO MODAL (الصندوق الأول) -->
 
         <div
             class="gift-modal"
@@ -269,52 +286,14 @@
                 ×
             </button>
 
-            <div class="flower-show">
-
-                <div class="floating-flower f1">
-                    🌸
-                </div>
-
-                <div class="floating-flower f2">
-                    🌷
-                </div>
-
-                <div class="floating-flower f3">
-                    🌼
-                </div>
-
-                <div class="floating-flower f4">
-                    🌸
-                </div>
-
-                <div class="big-flower">
-                    🌺
-                </div>
-
-
-                <div class="love-bubble b1">
-                    happy birthday reemoooo ♡
-                </div>
-
-                <div class="love-bubble b2">
-                    
-                    ♡ عيد ميلاد سعيد يا اختنا ريييموووو🥹🌷
-                </div>
-
-                <div class="love-bubble b3">
-                    ♡ عيد ميلاد سعيد يا اختنا ريييموووو🥹🌷 ♡
-                </div>
-
-                <div class="love-bubble b4">
-                    happy birthday reemoooo ♡
-                </div>
-
+            <div class="big-photo-container">
+                <img src="photo3.jpg" alt="صورة كبيرة" class="big-photo">
             </div>
 
         </div>
 
 
-        <!-- MUSIC MODAL -->
+        <!-- MUSIC MODAL (الصندوق الثاني) -->
 
         <div
             class="gift-modal"
@@ -349,7 +328,7 @@
                 >
 
                     <source
-                        src="./music.mp3"
+                        src="music.mp3"
                         type="audio/mpeg"
                     >
 
@@ -362,7 +341,7 @@
         </div>
 
 
-        <!-- LETTER MODAL -->
+        <!-- LETTER MODAL (الصندوق الثالث) -->
 
         <div
             class="gift-modal"
@@ -383,32 +362,72 @@
                 </h2>
 
                 <p>
-                  عيد ميلاد سعيد يا اختنا ريهام نتمنى لك سنة ملئة بسعادة و نجاح و صحجة و نتمنى لك العمر المديييد جدا يا اختنا 
+                  عيد ميلاد سعيد يا اختنا ريهام نتمنى لك سنة مليئة بسعادة و نجاح و صحة و نتمنى لك العمر المديد جدا يا اختنا 
                 </p>
 
                 <p>
                     شكرًا على كل لحظة جميلة، وعلى كل كلمة لطيفة،
                     وعلى كل ابتسامة جعلت يومًا عاديًا يبدو أجمل.
-                    ربما لا تكفي الكلمات لوصف قيمة الأشياء الجميلة
-                    التي نتذكرها.
                 </p>
 
-                <p>
-                    أتمنى أن تبقى الأيام القادمة مليئة بالفرح،
-                    والضحكات، واللحظات التي تستحق أن نتذكرها.
-                    وكلما عدت إلى هذه الصفحة، أتمنى أن تجد فيها
-                    شيئًا يجعلك تبتسم.
+                <p class="letter-sign">
+                    With love sister 
                 </p>
 
-                <p>
-                    هذه الرسالة مجرد طريقة صغيرة لأقول:
-                    شكرًا على كل شيء جميل ♡
-                </p>
+            </div>
 
-                <div class="letter-sign">
-                    With love sister ♡من صناعة 
-                  خوك مراد و 
-                  اختاك اكرام و حنان 
+        </div>
+
+
+        <!-- VOICE / RECORDINGS MODAL (الصندوق الرابع للتسجيلات) -->
+
+        <div
+            class="gift-modal"
+            id="voiceModal"
+        >
+
+            <button
+                class="close-modal"
+                onclick="closeGift()"
+            >
+                ×
+            </button>
+
+            <div class="music-box">
+
+                <div class="music-icon">
+                    🎙️
+                </div>
+
+                <h2>
+                    تسجيلات صوتية ♡
+                </h2>
+
+                <!-- التسجيل الأول -->
+                <div style="margin-bottom: 15px;">
+                    <p style="margin-bottom: 5px;">التسجيل الأول:</p>
+                    <audio controls preload="auto">
+                        <source src="music1.mp3" type="audio/mpeg">
+                        متصفحك لا يدعم تشغيل الصوت.
+                    </audio>
+                </div>
+
+                <!-- التسجيل الثاني -->
+                <div style="margin-bottom: 15px;">
+                    <p style="margin-bottom: 5px;">التسجيل الثاني:</p>
+                    <audio controls preload="auto">
+                        <source src="music2.mp3" type="audio/mpeg">
+                        متصفحك لا يدعم تشغيل الصوت.
+                    </audio>
+                </div>
+
+                <!-- التسجيل الثالث -->
+                <div>
+                    <p style="margin-bottom: 5px;">التسجيل الثالث:</p>
+                    <audio controls preload="auto">
+                        <source src="music3.mp3" type="audio/mpeg">
+                        متصفحك لا يدعم تشغيل الصوت.
+                    </audio>
                 </div>
 
             </div>

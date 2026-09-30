@@ -1,6 +1,5 @@
 let enteredPin = "";
-
-const correctPin = "2010";
+const correctPin = "1001";
 
 
 /* ========================= */
@@ -108,7 +107,7 @@ function checkPin() {
 
 
 /* ========================= */
-/* الصناديق الثلاثة */
+/* الصناديق الأربعة */
 /* ========================= */
 
 function openGift(number) {
@@ -142,6 +141,15 @@ function openGift(number) {
 
     }
 
+
+    if (number === 4) {
+
+        document
+            .getElementById("voiceModal")
+            .classList.add("show");
+
+    }
+
 }
 
 
@@ -165,4 +173,10 @@ function closeGift() {
         .getElementById("letterModal")
         .classList.remove("show");
 
+
+    document
+        .getElementById("voiceModal")
+        .classList.remove("show");
+
 }
+
